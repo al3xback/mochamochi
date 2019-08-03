@@ -158,30 +158,25 @@ header {
 .swiper-slide img {
 	max-width: 100%;
 }
-.swiper-pagination img{
-	width: 150px;
-	height: 150px;
-}
+
 .swiper-pagination-bullet {
-	background-image: url('../images/dot-1.png');
+	background-image: url('../images/dot-inactive.svg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	width: 150px;
-	height: 150px;
-	/* width: 20px;
-	height: 20px;
-	text-align: center;
-	line-height: 20px;
-	font-size: 12px;
-	color: #000;
+	background-size: contain;
+	width: 50px;
+	height: 40px;
+	border-radius: 0;
 	opacity: 1;
-	background: rgba(0, 0, 0, 0.2); */
+	background-color: transparent;
+	outline: none;
 }
 
+.swiper-container-horizontal>.swiper-pagination-bullets{
+	bottom: 28px;
+}
 .swiper-pagination-bullet-active {
-	/* color: #fff;
-	background: #007aff; */
+	background-image: url('../images/dot-active.svg');
 }
 
 .page-section {
@@ -296,7 +291,7 @@ header {
 
 .box-pink,
 .box-white {
-	width: 710px;
+	width: 50%;
 	padding: 34px 40px 54px 34px;
 	float: left;
 	box-sizing: border-box;
@@ -396,4 +391,20 @@ header {
 
 .text-footer:last-child p {
 	font-size: 30px;
+}
+.swiper-button-next, 
+.swiper-button-prev {
+	width: 90px;
+	height: 90px;
+	background-size: contain;
+	margin-top: -45px;
+}
+.swiper-button-next {
+	background-image: url('../images/icon_next.svg');
+	right: 35px;
+}
+
+.swiper-button-prev {
+	background-image: url('../images/icon_prev.svg');
+	left: 35px;
 }
