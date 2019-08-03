@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Gotham-Light';
+	src: url('../fonts/gotham-light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/gotham-light.otf') format('opentype'),
+		 url('../fonts/gotham-light.woff') format('woff'),
+		 url('../fonts/gotham-light.ttf') format('truetype'),
+		 url('../fonts/gotham-light.svg#gotham-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham-BookItalic';
+	src: url('../fonts/gotham-bookitalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/gotham-bookitalic.otf') format('opentype'),
+		 url('../fonts/gotham-bookitalic.woff') format('woff'),
+		 url('../fonts/gotham-bookitalic.ttf') format('truetype'),
+		 url('../fonts/gotham-bookitalic.svg#gotham-bookitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/gotham-bold.woff') format('woff'),
+		 url('../fonts/gotham-bold.ttf') format('truetype'),
+		 url('../fonts/gotham-bold.svg#gotham-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
