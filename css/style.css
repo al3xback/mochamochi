@@ -48,21 +48,27 @@ table {
   border-spacing: 0;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #88ad31;
+  background-color: #F7F2EB;
+  font-family: "Gotham-Light";
   color: #5D7562;
 }
 
-ul,
-li,
-a,
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.nav-menu {
   font-family: "GothamBold";
 }
 
@@ -91,49 +97,53 @@ p {
 
 .container {
   width: 100%;
-  margin: auto;
-  background-color: #F7F2EB;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 26px;
+}
+
+.sub-container {
+  width: 76%;
+  margin: 0 auto;
 }
 
 header {
   margin-bottom: 24px;
+  background-color: #CEA297;
 }
 
-.nav-bar {
-  height: 270px;
-  background-color: #CEA297;
+.header-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 102px 0 88px;
+  padding: 30px 76px 30px 62px;
 }
 
-.logo a {
+#logo {
   display: block;
 }
 
-.nav-menu {
+.nav-menu ul {
   display: flex;
 }
 
-.nav-menu li {
+.nav-menu ul li {
   display: block;
   letter-spacing: 2.81px;
   margin-right: 102px;
   text-transform: uppercase;
 }
 
-.nav-menu li:last-child {
+.nav-menu ul li:last-child {
   margin-right: 0;
 }
 
-.nav-menu li a {
+.nav-menu ul li a {
   color: #ffffff;
   font-size: 28px;
 }
 
 .swiper-box {
-  padding: 0 30px;
   margin-bottom: 180px;
 }
 
@@ -180,13 +190,9 @@ header {
   background: #007aff;
 }
 
-.wrapper {
-  width: 1420px;
-  margin: auto;
-}
-
 .page-section {
   overflow: hidden;
+  margin-bottom: 220px;
 }
 
 .about,
@@ -304,10 +310,6 @@ header {
 .wrapper-box-facts {
   overflow: hidden;
   display: flex;
-}
-
-.wrapper-box-facts:last-child {
-  margin-bottom: 270px;
 }
 
 .box-pink,

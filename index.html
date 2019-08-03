@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mocha Mochi  </title>
+	<title>Mocha Mochi</title>
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="container">
+	<div class="wrapper">
 		<header>
-			<div class="nav-bar">
-				<div class="logo">
-					<a href="#"><img src="images/logo.svg"></a>
+			<div class="container">
+				<div class="header-box">
+					<h1>
+						<a href="#" id="logo"><img src="images/logo.svg" alt="mocha mochi logo"/></a>
+					</h1>
+					<nav class="nav-menu">
+						<ul>
+							<li><a href="#about">About</a></li>
+							<li><a href="#menu">Menu</a></li>
+							<li><a href="#order">Order</a></li>
+							<li><a href="#fun-fact">Fun Facts</a></li>
+							<li><a href="#find-us">Find Us</a></li>
+						</ul>
+					</nav>
 				</div>
-				<ul class="nav-menu">
-					<li><a href="#about">About</a></li>
-					<li><a href="#menu">Menu</a></li>
-					<li><a href="#order">Order</a></li>
-					<li><a href="#">Fun Facts</a></li>
-					<li><a href="#">Find Us</a></li>
-				</ul>
 			</div>
 		</header>
+
 		<section class="page-section-swiper">
-			<div class="swiper-box">
-				<div class="swiper-container hero-swiper">
-		    		<div class="swiper-wrapper">
-		      			<div class="swiper-slide"><img src="images/placeimg_1.png"></div>
-		      			<div class="swiper-slide"><img src="images/placeimg_2.png"></div>
-		      			<div class="swiper-slide"><img src="images/placeimg_3.png"></div>
-		      			<!-- Add Pagination -->
-		      		</div>
-		      		<div class="swiper-pagination"></div>
-		      	</div>
-	      	</div>
-	    </section>
-	    <section class="page-section" id="about">
-			<div class="about">
-				<div class="wrapper">
+			<div class="container">
+				<div class="swiper-box">
+					<div class="swiper-container hero-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/placeimg_1.png"></div>
+							<div class="swiper-slide"><img src="images/placeimg_2.png"></div>
+							<div class="swiper-slide"><img src="images/placeimg_3.png"></div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="page-section" id="about">
+			<div class="container">
+				<div class="sub-container">
 					<h2>About</h2>
 					<p>Born out of passion of a mother-daughter duo, MochaMochi was launched in June 2011. We have been staying true to our heritage using our recipe passed down from our grand mother and relentlessly modernized each flavors to cater to the young crowds.</p>
 				</div>
 			</div>
 		</section>
 		<section class="page-section" id="menu">
-			<div class="menu">
-				<div class="wrapper">
+			<div class="container">
+				<div class="sub-container">
 					<h2>Menu</h2>
 					<div class="menu-box">
 						<h3>Mochi Box</h3>
@@ -97,8 +104,8 @@
 			</div>
 		</section>
 		<section class="page-section" id="order">
-			<div class="order">
-				<div class="wrapper">
+			<div class="container">
+				<div class="sub-container">
 					<h2>Order</h2>
 					<div class="medsos-order">
 						<a href="#"><img src="images/icon_wa.png"></a>
@@ -109,8 +116,8 @@
 			</div>
 		</section>
 		<section class="page-section" id="fun-facts">
-			<div class="fun-facts">
-				<div class="wrapper">
+			<div class="container">
+				<div class="sub-container">
 					<h2><img src="images/funfact.svg"></h2>
 					<div class="wrapper-box-facts">
 						<div class="box-pink">
@@ -164,40 +171,41 @@
 			</div>
 		</section>
 		<section class="page-section" id="find-us">
-			<div class="find-us">
-				<div class="wrapper">
+			<div class="container">
+				<div class="sub-container">
 					<h2>Find Us</h2>
 					<div class="outlet">
 						<h3>Jakarta:</h3>
 						<div class="outlet-list">
 							<p>Lippo Mall Puri (Food Hall, LG Floor)</p>
-    						<p>Lorem Ipsum</p>
-    					</div>
+							<p>Lorem Ipsum</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 		<footer>
 			<div class="text-footer">
 				<p>Follow us on Instagram for latest news</p>
 			</div>
 			<div class="swiper-footer">
 				<div class="swiper-container instagram-swiper">
-				    <div class="swiper-wrapper">
-				      <div class="swiper-slide">Slide 1</div>
-				      <div class="swiper-slide">Slide 2</div>
-				      <div class="swiper-slide">Slide 3</div>
-				      <div class="swiper-slide">Slide 4</div>
-				      <div class="swiper-slide">Slide 5</div>
-				      <div class="swiper-slide">Slide 6</div>
-				      <div class="swiper-slide">Slide 7</div>
-				      <div class="swiper-slide">Slide 8</div>
-				      <div class="swiper-slide">Slide 9</div>
-				      <div class="swiper-slide">Slide 10</div>
-				    </div>
-				    <!-- Add Arrows -->
-				    <div class="swiper-button-next"></div>
-				    <div class="swiper-button-prev"></div>
+					<div class="swiper-wrapper">
+					  <div class="swiper-slide">Slide 1</div>
+					  <div class="swiper-slide">Slide 2</div>
+					  <div class="swiper-slide">Slide 3</div>
+					  <div class="swiper-slide">Slide 4</div>
+					  <div class="swiper-slide">Slide 5</div>
+					  <div class="swiper-slide">Slide 6</div>
+					  <div class="swiper-slide">Slide 7</div>
+					  <div class="swiper-slide">Slide 8</div>
+					  <div class="swiper-slide">Slide 9</div>
+					  <div class="swiper-slide">Slide 10</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				  </div>
 			</div>
 			<div class="text-footer">
@@ -209,24 +217,24 @@
 		</footer>
 	</div>
 	<script src="js/swiper.min.js"></script>
-	  	<script>
-		    var swiper = new Swiper('.hero-swiper', {
-		      pagination: {
-		        el: '.swiper-pagination',
-		        clickable: true,
-		        renderBullet: function (index, className) {
-		          return '<span class="' + className + '">' + (index + 1) + '</span>';
-		        },
-		      },
-		    });
+		<script>
+			var swiper = new Swiper('.hero-swiper', {
+			  pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				renderBullet: function (index, className) {
+				  return '<span class="' + className + '">' + (index + 1) + '</span>';
+				},
+			  },
+			});
 
-		    var instaSwiper = new Swiper('.instagram-swiper', {
-		      slidesPerView: 4,
-		      navigation: {
-		        nextEl: '.swiper-button-next',
-		        prevEl: '.swiper-button-prev',
-		      },
-		    });
-  		</script>
+			var instaSwiper = new Swiper('.instagram-swiper', {
+			  slidesPerView: 4,
+			  navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			  },
+			});
+		</script>
 </body>
 </html>
