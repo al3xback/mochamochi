@@ -24,7 +24,7 @@ $(function() {
 		},
 	});
 
-	var instaSwiper = new Swiper('.instagram-swiper', {
+	var instaSwiper = new Swiper('.insta-swiper', {
 		slidesPerView: 4,
 		navigation: {
 			nextEl: '.swiper-button-next',

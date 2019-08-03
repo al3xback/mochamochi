@@ -1,0 +1,22 @@
+{
+	"name": "Mocha Mochi",
+	"short_name": "Mocha Mochi",
+	"description": "Mocha Mochi",
+	"start_url": "./",
+	"display": "standalone",
+	"orientation": "portrait",
+	"theme_color": "#5d7562",
+	"background_color": "#cea297",
+	"icons": [
+		{
+			"src": "images/favicons/android-icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "images/favicons/android-icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
