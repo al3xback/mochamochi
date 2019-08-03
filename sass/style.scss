@@ -84,6 +84,11 @@ p {
 }
 
 header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
 	margin-bottom: 24px;
 	background-color: #CEA297;
 }
@@ -117,6 +122,10 @@ header {
 .nav-menu ul li a {
 	color: #ffffff;
 	font-size: 28px;
+}
+
+.nav-menu ul li a.active {
+	color: pink;
 }
 
 .swiper-box {
@@ -167,7 +176,7 @@ header {
 
 .page-section {
 	overflow: hidden;
-	margin-bottom: 220px;
+	padding: 110px 0;
 }
 
 .about,
