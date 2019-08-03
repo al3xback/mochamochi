@@ -1,15 +1,14 @@
 var menuLink = $('.nav-menu ul li a');
-var headerHeight = $('header').outerHeight();
 
 function scrNav() {
 	var sTop = $(window).scrollTop();
+	var headerHeight = $('header').outerHeight();
+
 	$('.page-section').each(function() {
 		var id = $(this).attr('id'),
 			offset = $(this).offset().top - 1,
 			height = $(this).height();
-		console.log(id)
 		if (sTop >= (offset - headerHeight) && sTop < offset + height) {
-			console.log("active zzzzzzzzzzzzzzzzz " + id)
 			menuLink.removeClass('active');
 			$('.nav-menu').find('[href="#' + id + '"]').addClass('active');
 		}
@@ -22,9 +21,6 @@ $(function() {
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
-			renderBullet: function (index, className) {
-				return '<span class="' + className + '">' + (index + 1) + '</span>';
-			},
 		},
 	});
 
@@ -38,7 +34,9 @@ $(function() {
 
 	/* menu nav */
 	menuLink.on('click', function(e) {
+		var headerHeight = $('header').outerHeight();
 		var target = $($(this).attr('href'));
+
 		$('html, body').animate({
 			scrollTop: target.offset().top - headerHeight
 		}, 600);
