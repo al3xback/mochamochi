@@ -137,11 +137,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 76px 30px 62px;
+  padding: 30px 6.375em 30px 5.5em;
 }
 
 #logo {
   display: block;
+}
+
+.img-logo {
+  width: 10em;
+}
+
+.txt-logo {
+  /* display: none; */
+  display: block;
+  width: 25.875em;
 }
 
 .nav-menu ul {
@@ -151,8 +161,9 @@ header {
 .nav-menu ul li {
   display: block;
   letter-spacing: 2.81px;
-  margin-right: 102px;
+  margin: 0 1.7857142857em;
   text-transform: uppercase;
+  font-size: 1.75em;
 }
 
 .nav-menu ul li:last-child {
@@ -161,7 +172,6 @@ header {
 
 .nav-menu ul li a {
   color: #ffffff;
-  font-size: 28px;
 }
 
 .nav-menu ul li a.active {
@@ -455,6 +465,58 @@ header {
 .swiper-button-prev {
   background-image: url("../images/icon_prev.svg");
   left: 35px;
+}
+
+@media only screen and (max-width: 1800px) {
+  .header-box {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1560px) {
+  .header-box {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1460px) {
+  .header-box {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .header-box {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .header-box {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .header-box {
+    font-size: 8.6px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* .header-box {
+  	padding: 30px 28px 30px 20px;
+  }
+
+  .nav-menu ul li a {
+  	font-size: 15px;
+  }
+
+  .nav-menu ul li {
+  	margin-right: 50px;
+  }
+
+  .img-logo {
+  	width: 86px;
+  }
+
+  .txt-logo {
+  	width: 220px;
+  } */
 }
 
 /*# sourceMappingURL=style.css.map */

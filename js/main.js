@@ -48,5 +48,12 @@ $(function() {
 
 	$(window).on('scroll', function() {
 		scrNav();
+
+		if ($(this).scrollTop() > 100) {
+			$("header").addClass("transform");
+		}
+		else {
+			$("header").removeClass("transform");
+		}
 	});
 });

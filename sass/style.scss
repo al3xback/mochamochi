@@ -113,11 +113,21 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 30px 76px 30px 62px;
+	padding: 30px 102/16 + 0em 30px 88/16 + 0em;
 }
 
 #logo {
 	display: block;
+}
+
+.img-logo {
+	width: 160/16 + 0em;
+}
+
+.txt-logo {
+	/* display: none; */
+	display: block;
+	width: 414/16 + 0em;
 }
 
 .nav-menu ul {
@@ -127,8 +137,9 @@ header {
 .nav-menu ul li {
 	display: block;
 	letter-spacing: 2.81px;
-	margin-right: 102px;
+	margin: 0 50/28 + 0em;
 	text-transform: uppercase;
+	font-size: 28/16 + 0em;
 }
 
 .nav-menu ul li:last-child {
@@ -137,7 +148,6 @@ header {
 
 .nav-menu ul li a {
 	color: #ffffff;
-	font-size: 28px;
 }
 
 .nav-menu ul li a.active {
@@ -184,9 +194,10 @@ header {
 	outline: none;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets{
+.swiper-container-horizontal>.swiper-pagination-bullets {
 	bottom: 28px;
 }
+
 .swiper-pagination-bullet-active {
 	background-image: url('../images/dot-active.svg');
 }
@@ -412,13 +423,15 @@ header {
 .text-footer:last-child p {
 	font-size: 30px;
 }
-.swiper-button-next, 
+
+.swiper-button-next,
 .swiper-button-prev {
 	width: 90px;
 	height: 90px;
 	background-size: contain;
 	margin-top: -45px;
 }
+
 .swiper-button-next {
 	background-image: url('../images/icon_next.svg');
 	right: 35px;
@@ -428,3 +441,58 @@ header {
 	background-image: url('../images/icon_prev.svg');
 	left: 35px;
 }
+
+@media only screen and (max-width:1800px) {
+	.header-box {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width:1560px) {
+	.header-box {
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width:1460px) {
+	.header-box {
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width:1350px) {
+	.header-box {
+		font-size: 11px;
+	}
+}
+@media only screen and (max-width:1230px) {
+	.header-box {
+		font-size: 10px;
+	}
+}
+@media only screen and (max-width:1120px) {
+	.header-box {
+		font-size: 8.6px;
+	}
+}
+@media only screen and (max-width:1024px) {
+	/* .header-box {
+		padding: 30px 28px 30px 20px;
+	}
+
+	.nav-menu ul li a {
+		font-size: 15px;
+	}
+
+	.nav-menu ul li {
+		margin-right: 50px;
+	}
+
+	.img-logo {
+		width: 86px;
+	}
+
+	.txt-logo {
+		width: 220px;
+	} */
+
+}
+
