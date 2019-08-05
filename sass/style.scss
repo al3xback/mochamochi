@@ -91,7 +91,7 @@ p {
 	width: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
-	padding: 0 26px;
+	padding: 0 30px;
 }
 
 .sub-container {
@@ -105,7 +105,6 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 10;
-	margin-bottom: 24px;
 	background-color: #CEA297;
 }
 
@@ -125,8 +124,8 @@ header {
 }
 
 .txt-logo {
-	/* display: none; */
-	display: block;
+	display: none;
+	/* display: block; */
 	width: 414/16 + 0em;
 }
 
@@ -227,69 +226,48 @@ header {
 	bottom: -46px;
 }
 
-.about p {
-	width: 1126px;
-	float: right;
-	letter-spacing: 0.7px;
-	text-align: justify;
-	font-family: 'GothamBold';
+.page-section-content {
+	padding: 60px 0;
+	margin-left: 296px/1420px*100%;
+	border-top: 3px solid #5D7562;
 }
 
-.menu-box,
-.daifuku-box,
-.plain-box {
-	width: 1126px;
-	float: right;
-	border-bottom: 3px solid #5D7562;
-	padding-bottom: 60px;
+.page-section-content:first-child{
+	border-top: 0;
+	padding-top: 0;
 }
-
-.plain-box {
-	border-bottom: none;
+.page-section-content:last-child{
 	padding-bottom: 0;
 }
 
-.daifuku-box,
-.plain-box {
-	padding-top: 60px;
+.page-section-content h3 {
+	margin-bottom: 50px;
 }
 
-.menu-box h3,
-.daifuku-box h3,
-.plain-box h3 {
-	margin-bottom: 42px;
+.page-section-content p{
+	letter-spacing: 0.7px;
+	text-align: justify;
 }
 
-.inner-wrapper {
-	width: 1044px;
-	float: right;
+.inner-content {
+	padding-left: 82px/1126px*100%;
+}
+
+.content-list {
+	font-family: 'Gotham-Light';
 }
 
 .menu-list {
-	overflow: hidden;
 	margin-bottom: 78px;
+	display: flex;
 }
 
 .menu-list-left {
-	float: left;
-	position: relative;
+	border-right: 1px solid #5D7562;
 	padding-right: 66px;
 }
 
-.menu-list-left::after {
-	content: '';
-	display: inline-block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 1px;
-	height: 154px;
-	background-color: #5D7562;
-}
-
 .menu-list-right {
-	float: left;
-	position: relative;
 	padding-left: 66px;
 }
 
@@ -446,32 +424,132 @@ header {
 	.header-box {
 		font-size: 14px;
 	}
+
+	.wrapper {
+		padding-top: 270px;
+	}
+
+	.container {
+		padding: 0 28px;
+	}
+
+	.page-section-content p {
+		font-size: 30px;
+	}
+
 }
 
 @media only screen and (max-width:1560px) {
 	.header-box {
 		font-size: 13px;
 	}
+
+	.wrapper {
+	    padding-top: 253px;
+	}
+
+	.container {
+		padding: 0 26px;
+	}
+
+	.page-section{
+		padding: 90px 0;
+	}
+
+	.page-section h2 {
+		font-size: 45px;
+		margin-bottom: 130px;
+	}
+
+	.page-section h2::after {
+		width: 85px;
+	}
+
+	.page-section-content p {
+		font-size: 26px;
+	}
+
 }
 @media only screen and (max-width:1460px) {
 	.header-box {
 		font-size: 12px;
 	}
+
+	.wrapper {
+	    padding-top: 236px;
+	}
+
+	.container {
+		padding: 0 24px;
+	}
+
+	.swiper-pagination-bullet {
+		width: 40px;
+	}
+
 }
 @media only screen and (max-width:1350px) {
 	.header-box {
 		font-size: 11px;
 	}
+
+	.wrapper {
+	    padding-top: 221px;
+	}
+
+	.container {
+		padding: 0 22px;
+	}
+
+	.page-section{
+		padding: 65px 0;
+	}
+
+	.page-section h2 {
+		font-size: 33px;
+		margin-bottom: 90px;
+	}
+
+	.page-section h2::after {
+		width: 62px;
+	}
+
+	.page-section-content p {
+		font-size: 18px;
+	}
+
 }
 @media only screen and (max-width:1230px) {
 	.header-box {
 		font-size: 10px;
 	}
+
+	.wrapper {
+	    padding-top: 204px;
+	}
+
+	.container {
+		padding: 0 20px;
+	}
+
+	.swiper-pagination-bullet {
+		width: 30px;
+	}
+
 }
 @media only screen and (max-width:1120px) {
 	.header-box {
 		font-size: 8.6px;
 	}
+
+	.wrapper {
+	    padding-top: 182px;
+	}
+
+	.container {
+		padding: 0 16px;
+	}
+
 }
 @media only screen and (max-width:1024px) {
 	/* .header-box {
@@ -496,3 +574,6 @@ header {
 
 }
 
+.pad-0{
+	padding: 0;
+}
