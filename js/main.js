@@ -25,6 +25,7 @@ $(function() {
 	});
 
 	var instaSwiper = new Swiper('.insta-swiper', {
+		speed: 600,
 		slidesPerView: 4,
 		navigation: {
 			nextEl: '.swiper-button-next',
