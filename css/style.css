@@ -147,9 +147,20 @@ header {
   right: 0;
   z-index: 10;
   background-color: #CEA297;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .header-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -199,17 +210,6 @@ header {
   top: 24px;
 }
 
-.side-menu-popup {
-  visibility: visible;
-  position: fixed;
-  top: 5em;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-  overflow: hidden;
-}
-
 #logo {
   display: block;
 }
@@ -221,6 +221,12 @@ header {
 .txt-logo {
   display: none;
   width: 25.875em;
+}
+
+.transform {
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
 .transform .header-box {
@@ -236,6 +242,10 @@ header {
 }
 
 .nav-menu ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -255,7 +265,7 @@ header {
   color: #ffffff;
 }
 
-.nav-menu ul li a.active {
+.header-box .nav-menu ul li a.active {
   color: pink;
 }
 
@@ -553,7 +563,93 @@ footer p {
   padding: 0;
 }
 
-@media only screen and (max-width: 1800px) {
+.side-menu-popup {
+  visibility: hidden;
+  position: fixed;
+  top: 5em;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.overlay-trans {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.side-menu-box {
+  position: relative;
+  z-index: 1;
+  width: 240px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.side-menu-content {
+  padding: 42px 36px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mobile-nav-logo {
+  margin-bottom: 30px;
+}
+
+.mobile-nav-logo a {
+  display: block;
+}
+
+.mobile-nav-menu ul {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.mobile-nav-menu ul li {
+  margin: 0;
+  border-bottom: 1px solid #5D7562;
+  text-align: center;
+}
+
+.mobile-nav-menu ul li a {
+  display: block;
+  padding: 36px 0;
+  font-family: "GothamBold";
+  font-size: 18px;
+  color: #5D7562;
+  text-transform: uppercase;
+}
+
+.show-menu .side-menu-popup {
+  visibility: visible;
+}
+
+.show-menu .side-menu-box {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 1820px) {
   .header-box {
     font-size: 14px;
   }
@@ -570,7 +666,7 @@ footer p {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 1560px) {
+@media only screen and (max-width: 1580px) {
   .header-box {
     font-size: 13px;
   }
@@ -600,7 +696,7 @@ footer p {
     font-size: 26px;
   }
 }
-@media only screen and (max-width: 1460px) {
+@media only screen and (max-width: 1480px) {
   .header-box {
     font-size: 12px;
   }
@@ -617,7 +713,7 @@ footer p {
     width: 40px;
   }
 }
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1370px) {
   .header-box {
     font-size: 11px;
   }
@@ -647,7 +743,7 @@ footer p {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 1250px) {
   .header-box {
     font-size: 10px;
   }
@@ -664,7 +760,7 @@ footer p {
     width: 30px;
   }
 }
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1140px) {
   .header-box {
     font-size: 8.6px;
   }
@@ -677,7 +773,7 @@ footer p {
     padding: 0 16px;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1020px) {
   .header-box .nav-menu,
 .img-logo {
     display: none;
@@ -692,8 +788,12 @@ footer p {
     width: 264px;
   }
 
-  .header-box {
+  .header-box,
+.transform .header-box {
     height: 5em;
+  }
+
+  .header-box {
     font-size: 16px;
     padding: 16px 32px;
   }

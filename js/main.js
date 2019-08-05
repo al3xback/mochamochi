@@ -59,7 +59,7 @@ $(function() {
 
 	scrNav();
 
-	$('.menu-mobile').click(toggleMenu);
+	$('.menu-mobile, .overlay-trans, .mobile-nav-menu ul li a').click(toggleMenu);
 
 	$(window).on('scroll', function() {
 		scrNav();

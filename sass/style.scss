@@ -24,6 +24,14 @@
 	align-items: $align;
 }
 
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
 @mixin transition($transition) {
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
@@ -130,10 +138,14 @@ header {
 	right: 0;
 	z-index: 10;
 	background-color: #CEA297;
+	-webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+	@include transition(all 0.4s);
 }
 
 .header-box {
-	display: flex;
+	@include flexbox();
 	@include align-items(center);
 	@include justify-content(space-between);
 	padding: 0 102/16 + 0em 0 88/16 + 0em;
@@ -171,21 +183,6 @@ header {
 	top: 24px;
 }
 
-.side-menu-popup {
-	visibility: visible;
-	position: fixed;
-	top: 5em;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	z-index: 3;
-	overflow: hidden;
-}
-
-.side-menu-box {
-
-}
-
 #logo {
 	display: block;
 }
@@ -197,6 +194,12 @@ header {
 .txt-logo {
 	display: none;
 	width: 414/16 + 0em;
+}
+
+.transform {
+	-webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+	-moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
 .transform .header-box {
@@ -212,7 +215,7 @@ header {
 }
 
 .nav-menu ul {
-	display: flex;
+	@include flexbox();
 }
 
 .nav-menu ul li {
@@ -231,7 +234,7 @@ header {
 	color: #ffffff;
 }
 
-.nav-menu ul li a.active {
+.header-box .nav-menu ul li a.active {
 	color: pink;
 }
 
@@ -500,7 +503,82 @@ footer p {
 	padding: 0;
 }
 
-@media only screen and (max-width: 1800px) {
+.side-menu-popup {
+	visibility: hidden;
+	position: fixed;
+	top: 5em;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	overflow: hidden;
+}
+
+.overlay-trans {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+
+.side-menu-box {
+	position: relative;
+	z-index: 1;
+	width: 240px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	@include transition(all 0.4s ease-in-out);
+	@include transform(translateX(-100%));
+}
+
+.side-menu-content {
+	padding: 42px 36px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.mobile-nav-logo {
+	margin-bottom: 30px;
+}
+
+.mobile-nav-logo a {
+	display: block;
+}
+
+.mobile-nav-menu ul {
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.mobile-nav-menu ul li {
+	margin: 0;
+	border-bottom: 1px solid #5D7562;
+	text-align: center;
+}
+
+.mobile-nav-menu ul li a {
+	display: block;
+	padding: 36px 0;
+	font-family: 'GothamBold';
+	font-size: 18px;
+	color: #5D7562;
+	text-transform: uppercase;
+}
+
+.show-menu .side-menu-popup {
+	visibility: visible;
+}
+
+.show-menu .side-menu-box {
+	@include transform(translateX(0));
+}
+
+@media only screen and (max-width: 1820px) {
 	.header-box {
 		font-size: 14px;
 	}
@@ -519,7 +597,7 @@ footer p {
 
 }
 
-@media only screen and (max-width: 1560px) {
+@media only screen and (max-width: 1580px) {
 	.header-box {
 		font-size: 13px;
 	}
@@ -550,7 +628,7 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1460px) {
+@media only screen and (max-width: 1480px) {
 	.header-box {
 		font-size: 12px;
 	}
@@ -568,7 +646,7 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1370px) {
 	.header-box {
 		font-size: 11px;
 	}
@@ -599,7 +677,7 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 1250px) {
 	.header-box {
 		font-size: 10px;
 	}
@@ -617,7 +695,7 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1140px) {
 	.header-box {
 		font-size: 8.6px;
 	}
@@ -631,7 +709,7 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1020px) {
 	.header-box .nav-menu,
 	.img-logo {
 		display: none;
@@ -646,8 +724,12 @@ footer p {
 		width: 264px;
 	}
 
-	.header-box {
+	.header-box,
+	.transform .header-box {
 		height: 80/16 + 0em;
+	}
+
+	.header-box {
 		font-size: 16px;
 		padding: 16px 32px;
 	}
