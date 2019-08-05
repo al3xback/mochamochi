@@ -597,3 +597,33 @@ header {
 .pad-0{
 	padding: 0;
 }
+
+.mobile-nav-box {
+	background-color: #ffffff;
+	opacity: 0.8;
+	position: absolute;
+	height: 100vh;
+}
+
+.mobile-nav {
+	padding: 0 38px;
+	padding-top: 42px;
+}
+
+.mobile-nav h1 {
+	padding-bottom: 30px;
+}
+
+.mobile-nav-menu ul li {
+	border-bottom: 1px solid #5D7562;
+	text-align: center;
+}
+
+.mobile-nav-menu ul li a {
+	display: block;
+	padding: 36px 0;
+	font-family: 'GothamBold';
+	font-size: 18px;
+	color: #5D7562;
+	text-transform: uppercase;
+}
