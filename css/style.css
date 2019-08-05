@@ -106,9 +106,28 @@ p {
   letter-spacing: 3.8px;
 }
 
+.wrapper,
+.parallax-mirror::before,
+.insta-swiper-con {
+  background-color: #f7f2eb;
+}
+
 .wrapper {
   padding-top: 300px;
-  background-color: #f7f2eb;
+  background-size: 100% auto !important;
+}
+
+.parallax-mirror::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-mirror + .wrapper {
+  background-color: transparent;
 }
 
 .container {
@@ -455,6 +474,7 @@ header {
   height: 90px;
   background-size: contain;
   margin-top: -45px;
+  outline: none;
 }
 
 .swiper-button-next {
