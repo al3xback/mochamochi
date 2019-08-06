@@ -4,6 +4,9 @@ var menuLink = $('.nav-menu ul li a');
 function toggleMenu() {
 	if (isOpen) {
 		$('body').removeClass('show-menu');
+		setTimeout(function() {
+			$(".side-menu-content").scrollTop(0);
+		}, 300);
 	} else {
 		$('body').addClass('show-menu');
 	}

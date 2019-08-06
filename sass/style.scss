@@ -97,6 +97,10 @@ p {
 	letter-spacing: 0.05em;
 }
 
+img {
+	max-width: 100%;
+}
+
 .wrapper,
 .parallax-mirror::before,
 .insta-feed-swiper {
@@ -250,10 +254,6 @@ header {
 	@include flexbox();
 	@include justify-content(center);
 	@include align-items(center);
-}
-
-.swiper-slide img {
-	max-width: 100%;
 }
 
 .swiper-pagination-bullet {
@@ -534,7 +534,7 @@ footer p {
 }
 
 .side-menu-content {
-	padding: 42px 36px;
+	padding: (42/240)*100 + 0% (36/240)*100 + 0%;
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -559,15 +559,13 @@ footer p {
 	margin: 0;
 	border-bottom: 1px solid #5D7562;
 	text-align: center;
+	font-size: 18px;
 }
 
 .mobile-nav-menu ul li a {
 	display: block;
-	padding: 36px 0;
-	font-family: 'GothamBold';
-	font-size: 18px;
+	padding: 36/18 + 0em 0;
 	color: #5D7562;
-	text-transform: uppercase;
 }
 
 .show-menu .side-menu-popup {
@@ -585,10 +583,6 @@ footer p {
 
 	.wrapper {
 		padding-top: 270px;
-	}
-
-	.container {
-		padding: 0 28px;
 	}
 
 	.page-section-content p {
@@ -641,11 +635,7 @@ footer p {
 	}
 
 	.wrapper {
-		padding-top: 253px;
-	}
-
-	.container {
-		padding: 0 26px;
+		padding-top: 255px;
 	}
 
 	.page-section {
@@ -724,10 +714,6 @@ footer p {
 		padding-top: 236px;
 	}
 
-	.container {
-		padding: 0 24px;
-	}
-
 	.swiper-pagination-bullet {
 		width: 40px;
 	}
@@ -758,11 +744,7 @@ footer p {
 	}
 
 	.wrapper {
-		padding-top: 221px;
-	}
-
-	.container {
-		padding: 0 22px;
+		padding-top: 220px;
 	}
 
 	.page-section {
@@ -832,11 +814,11 @@ footer p {
 	}
 
 	.wrapper {
-		padding-top: 204px;
+		padding-top: 190px;
 	}
 
 	.container {
-		padding: 0 20px;
+		padding: 0 24px;
 	}
 
 	.swiper-pagination-bullet {
@@ -869,11 +851,7 @@ footer p {
 	}
 
 	.wrapper {
-		padding-top: 182px;
-	}
-
-	.container {
-		padding: 0 16px;
+		padding-top: 165px;
 	}
 
 }
@@ -895,18 +873,21 @@ footer p {
 
 	.header-box,
 	.transform .header-box {
-		height: 80/16 + 0em;
+		height: 5em;
 	}
 
 	.header-box {
 		font-size: 16px;
-		padding: 16px 32px;
+		padding: 0 22px;
 	}
 
 	.wrapper {
-		padding-top: 6.4em;
+		padding-top: 102px;
 	}
 
+	.container {
+		padding: 0 20px;
+	}
 }
 
 @media only screen and (max-width:1000px) {
@@ -959,6 +940,57 @@ footer p {
 	}
 }
 
+@media only screen and (max-width:750px) {
+	.txt-logo {
+	    width: 220px;
+	}
+
+	.menu-mobile {
+		width: 30px;
+		height: 23px;
+	}
+
+	.hamburger-line {
+		height: 3px;
+	}
+
+	.hamburger-line-2 {
+		top: 10px;
+	}
+
+	.hamburger-line-3 {
+		top: 20px;
+	}
+
+	.header-box {
+		padding: 0 20px;
+	}
+
+	.header-box, .transform .header-box {
+		height: 4em;
+	}
+
+	.side-menu-popup {
+		top: 4em;
+	}
+
+	.wrapper {
+		padding-top: 80px;
+	}
+
+	.container {
+		padding: 0 16px;
+	}
+
+	.side-menu-box {
+		width: 220px;
+	}
+
+	.mobile-nav-menu ul li {
+		font-size: 16px;
+	}
+}
+
 @media only screen and (max-width:500px) {
 	.insta-feed-info p {
 		font-size: 16px;
@@ -975,5 +1007,37 @@ footer p {
 	footer p {
 		font-size: 12px;
 	}
-}
 
+	.txt-logo {
+		width: 190px;
+	}
+
+	.menu-mobile {
+		width: 26px;
+		height: 21px;
+	}
+
+	.hamburger-line-2 {
+		top: 9px;
+	}
+
+	.hamburger-line-3 {
+		top: 18px;
+	}
+
+	.wrapper {
+		padding-top: 72px;
+	}
+
+	.header-box, .transform .header-box {
+		height: 3.4em;
+	}
+
+	.side-menu-popup {
+		top: 3.4em;
+	}
+
+	.side-menu-box {
+		width: 210px;
+	}
+}
