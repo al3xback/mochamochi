@@ -910,5 +910,22 @@ footer p {
     left: 14px;
   }
 }
+@media only screen and (max-width: 500px) {
+  .insta-feed-info p {
+    font-size: 16px;
+  }
+
+  .insta-feed-info {
+    padding: 16px 0;
+  }
+
+  .copyright-con {
+    padding: 24px 0;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
