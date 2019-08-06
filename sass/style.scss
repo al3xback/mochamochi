@@ -94,12 +94,12 @@ h4 {
 p {
 	line-height: 1.8;
 	font-size: 34px;
-	letter-spacing: 3.8px;
+	letter-spacing: 0.05em;
 }
 
 .wrapper,
 .parallax-mirror::before,
-.insta-feed-body {
+.insta-feed-swiper {
 	background-color: #f7f2eb;
 }
 
@@ -308,11 +308,12 @@ header {
 	border-top: 3px solid #5D7562;
 }
 
-.page-section-content:first-child{
+.page-section-content:first-child {
 	border-top: 0;
 	padding-top: 0;
 }
-.page-section-content:last-child{
+
+.page-section-content:last-child {
 	padding-bottom: 0;
 }
 
@@ -320,7 +321,7 @@ header {
 	margin-bottom: 50px;
 }
 
-.page-section-content p{
+.page-section-content p {
 	letter-spacing: 0.7px;
 	text-align: justify;
 }
@@ -401,7 +402,6 @@ header {
 
 .item-box p {
 	font-size: 30px;
-	letter-spacing: 2.5px;
 }
 
 .item-box h2 {
@@ -432,7 +432,6 @@ header {
 }
 
 .outlet {
-	width: 1126px;
 	float: right;
 }
 
@@ -465,27 +464,27 @@ footer {
 
 footer p {
 	line-height: 1.4;
-	font-size: 30px;
+	font-size: 24px;
 }
 
 .insta-feed-info {
-	padding: 38px 0;
+	padding: 32px 0;
 }
 
 .insta-feed-info p {
-	font-size: 38px;
+	font-size: 32px;
 }
 
 .copyright-con {
-	padding: 68px 0;
+	padding: 46px 0;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-	width: 90px;
-	height: 90px;
+	width: 80px;
+	height: 80px;
 	background-size: contain;
-	margin-top: -45px;
+	margin-top: -40px;
 	outline: none;
 }
 
@@ -578,7 +577,7 @@ footer p {
 	@include transform(translateX(0));
 }
 
-@media only screen and (max-width: 1820px) {
+@media only screen and (max-width:1820px) {
 	.header-box {
 		font-size: 14px;
 	}
@@ -597,20 +596,54 @@ footer p {
 
 }
 
-@media only screen and (max-width: 1580px) {
+@media only screen and (max-width:1750px) {
+	.insta-feed-info p {
+		font-size: 28px;
+	}
+
+	footer p {
+		font-size: 22px;
+	}
+
+	.swiper-button-next, .swiper-button-prev {
+		width: 64px;
+		height: 64px;
+		margin-top: -32px;
+	}
+}
+
+@media only screen and (max-width:1600px) {
+	.insta-feed-info {
+		padding: 28px 0;
+	}
+
+	.insta-feed-info p {
+		font-size: 25px;
+	}
+
+	.copyright-con {
+		padding: 40px 0;
+	}
+
+	footer p {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width:1580px) {
 	.header-box {
 		font-size: 13px;
 	}
 
 	.wrapper {
-	    padding-top: 253px;
+		padding-top: 253px;
 	}
 
 	.container {
 		padding: 0 26px;
 	}
 
-	.page-section{
+	.page-section {
 		padding: 90px 0;
 	}
 
@@ -626,15 +659,15 @@ footer p {
 	.page-section-content p {
 		font-size: 26px;
 	}
-
 }
-@media only screen and (max-width: 1480px) {
+
+@media only screen and (max-width:1480px) {
 	.header-box {
 		font-size: 12px;
 	}
 
 	.wrapper {
-	    padding-top: 236px;
+		padding-top: 236px;
 	}
 
 	.container {
@@ -646,20 +679,39 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1370px) {
+
+@media only screen and (max-width:1460px) {
+	.insta-feed-info {
+		padding: 24px 0;
+	}
+
+	.insta-feed-info p {
+		font-size: 21px;
+	}
+
+	.copyright-con {
+		padding: 32px 0;
+	}
+
+	footer p {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width:1370px) {
 	.header-box {
 		font-size: 11px;
 	}
 
 	.wrapper {
-	    padding-top: 221px;
+		padding-top: 221px;
 	}
 
 	.container {
 		padding: 0 22px;
 	}
 
-	.page-section{
+	.page-section {
 		padding: 65px 0;
 	}
 
@@ -677,13 +729,14 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1250px) {
+
+@media only screen and (max-width:1250px) {
 	.header-box {
 		font-size: 10px;
 	}
 
 	.wrapper {
-	    padding-top: 204px;
+		padding-top: 204px;
 	}
 
 	.container {
@@ -694,14 +747,29 @@ footer p {
 		width: 30px;
 	}
 
+	.swiper-button-next, .swiper-button-prev {
+		width: 54px;
+		height: 54px;
+		margin-top: -27px;
+	}
+
+	.swiper-button-next {
+		right: 26px;
+	}
+
+	.swiper-button-prev {
+		left: 26px;
+	}
+
 }
-@media only screen and (max-width: 1140px) {
+
+@media only screen and (max-width:1140px) {
 	.header-box {
 		font-size: 8.6px;
 	}
 
 	.wrapper {
-	    padding-top: 182px;
+		padding-top: 182px;
 	}
 
 	.container {
@@ -709,7 +777,8 @@ footer p {
 	}
 
 }
-@media only screen and (max-width: 1020px) {
+
+@media only screen and (max-width:1020px) {
 	.header-box .nav-menu,
 	.img-logo {
 		display: none;
@@ -736,5 +805,56 @@ footer p {
 
 	.wrapper {
 		padding-top: 6.4em;
+	}
+
+}
+
+@media only screen and (max-width:1000px) {
+	.swiper-button-next, .swiper-button-prev {
+		width: 42px;
+		height: 42px;
+		margin-top: -21px;
+	}
+
+	.swiper-button-next {
+		right: 21px;
+	}
+
+	.swiper-button-prev {
+		left: 21px;
+	}
+}
+
+@media only screen and (max-width:900px) {
+	.insta-feed-info {
+		padding: 20px 0;
+	}
+
+	.insta-feed-info p {
+		font-size: 18px;
+	}
+
+	.copyright-con {
+		padding: 28px 0;
+	}
+
+	footer p {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.swiper-button-next, .swiper-button-prev {
+		width: 32px;
+		height: 32px;
+		margin-top: -16px;
+	}
+
+	.swiper-button-next {
+		right: 14px;
+	}
+
+	.swiper-button-prev {
+		left: 14px;
 	}
 }
