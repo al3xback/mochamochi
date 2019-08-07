@@ -31,6 +31,10 @@ function scrNav() {
 }
 
 $(function() {
+	AOS.init({
+		duration: 650,
+	});
+
 	/* swiper */
 	var swiper = new Swiper('.hero-swiper', {
 		pagination: {
