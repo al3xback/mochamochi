@@ -438,6 +438,19 @@ header {
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  margin: 0 -20px;
+}
+
+.icon-medsos {
+  padding: 20px;
+}
+
+.icon-medsos a {
+  display: block;
+}
+
+.icon-medsos img {
+  vertical-align: middle;
 }
 
 .funfact-section .page-section-title {
@@ -654,10 +667,6 @@ footer p {
     padding-top: 270px;
   }
 
-  .medsos-order img {
-    width: 300px;
-  }
-
   .page-section {
     padding: 90px 0;
   }
@@ -683,6 +692,10 @@ footer p {
   }
 }
 @media only screen and (max-width: 1750px) {
+  .icon-medsos img {
+    max-height: 65px;
+  }
+
   .insta-feed-info p {
     font-size: 28px;
   }
@@ -773,10 +786,6 @@ footer p {
   }
 }
 @media only screen and (max-width: 1480px) {
-  .medsos-order img {
-    width: 250px;
-  }
-
   .header-box {
     font-size: 12px;
   }
@@ -786,6 +795,10 @@ footer p {
   }
 }
 @media only screen and (max-width: 1460px) {
+  .icon-medsos img {
+    max-height: 50px;
+  }
+
   .insta-feed-info {
     padding: 24px 0;
   }
@@ -885,10 +898,6 @@ footer p {
     padding: 0 24px;
   }
 
-  .medsos-order img {
-    width: 222px;
-  }
-
   .swiper-button-next, .swiper-button-prev {
     width: 54px;
     height: 54px;
@@ -984,12 +993,12 @@ footer p {
   h3 {
     font-size: 22px;
   }
+
+  .icon-medsos img {
+    max-height: 40px;
+  }
 }
 @media only screen and (max-width: 1020px) {
-  .medsos-order img {
-    width: 184px;
-  }
-
   .header-box .nav-menu,
 .img-logo {
     display: none;
@@ -1116,6 +1125,15 @@ footer p {
   }
 }
 @media only screen and (max-width: 750px) {
+  .medsos-order {
+    margin: 0 -10px;
+  }
+
+  .icon-medsos {
+    width: 50%;
+    padding: 10px;
+  }
+
   .txt-logo {
     width: 220px;
   }
@@ -1163,6 +1181,10 @@ footer p {
 
   .mobile-nav-menu ul li {
     font-size: 16px;
+  }
+
+  .medsos-order {
+    flex-wrap: wrap;
   }
 
   .wrapper-box-facts {
