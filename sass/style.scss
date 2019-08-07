@@ -109,7 +109,18 @@ img {
 
 .wrapper {
 	padding-top: 300px;
-	background-size: 100% auto !important;
+	background-image: url('../images/main-pattern.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	position: relative;
+}
+
+.pattern-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .parallax-mirror::before {
@@ -500,7 +511,7 @@ footer p {
 }
 
 .pad-0 {
-	padding: 0;
+	padding: 0 !important;
 }
 
 .side-menu-popup {
@@ -662,11 +673,29 @@ footer p {
 
 	.flavors-list h4 {
 		font-size: 25px;
+		margin-bottom: 20px;
 	}
 
 	.page-section-content p {
 		font-size: 26px;
 	}
+
+	.item-box h2::after {
+		width: 200px;
+	}
+
+	.menu-list {
+		margin-bottom: 60px;
+	}
+
+	.menu-list-left {
+		padding-right: 51px;
+	}
+
+	.menu-list-right {
+		padding-left: 51px;
+	}
+
 }
 
 @media only screen and (max-width:1480px) {
@@ -771,6 +800,7 @@ footer p {
 
 	.flavors-list h4 {
 		font-size: 20px;
+		margin-bottom: 12px;
 	}
 
 	.page-section-content p {
@@ -804,6 +834,28 @@ footer p {
 
 	.item-box h2::after {
 		bottom: -20px;
+	}
+
+	.outlet-list {
+		padding-left: 24px;
+	}
+
+	.outlet-list p::before {
+		width: 6px;
+		height: 6px;
+		left: -14px;
+	}
+
+	.menu-list {
+		margin-bottom: 42px;
+	}
+
+	.menu-list-left {
+		padding-right: 36px;
+	}
+
+	.menu-list-right {
+		padding-left: 36px;
 	}
 
 }
@@ -846,6 +898,11 @@ footer p {
 }
 
 @media only screen and (max-width:1140px) {
+
+	.page-section-content {
+		margin-left: 150px/1140px*100%;;
+	}
+
 	.header-box {
 		font-size: 8.6px;
 	}
@@ -857,6 +914,11 @@ footer p {
 }
 
 @media only screen and (max-width:1020px) {
+
+	.medsos-order img{
+		width: 184px;
+	}
+
 	.header-box .nav-menu,
 	.img-logo {
 		display: none;
@@ -891,6 +953,31 @@ footer p {
 }
 
 @media only screen and (max-width:1000px) {
+
+	.page-section-content {
+		padding: 22px 0;
+	}
+
+	.page-section-content h3 {
+		margin-bottom: 22px;
+	}
+
+	.menu-list {
+		margin-bottom: 32px;
+	}
+
+	.menu-list-left {
+		padding-right: 32px;
+	}
+
+	.menu-list-right {
+		padding-left: 32px;
+	}
+
+	.page-section-content {
+		margin-left: 100px/1000px*100%;;
+	}
+
 	.swiper-button-next, .swiper-button-prev {
 		width: 42px;
 		height: 42px;
@@ -907,6 +994,11 @@ footer p {
 }
 
 @media only screen and (max-width:900px) {
+
+	.page-section-content {
+		margin-left: 60px/900px*100%;;
+	}
+
 	.insta-feed-info {
 		padding: 20px 0;
 	}
@@ -992,6 +1084,21 @@ footer p {
 }
 
 @media only screen and (max-width:500px) {
+
+	.page-section h2 {
+		font-size: 28px;
+	}
+
+	.page-section h2::after {
+		width: 52px;
+		height: 5px;
+		bottom: -30px;
+	}
+
+	.page-section-content p {
+		font-size: 16px;
+	}
+
 	.insta-feed-info p {
 		font-size: 16px;
 	}
